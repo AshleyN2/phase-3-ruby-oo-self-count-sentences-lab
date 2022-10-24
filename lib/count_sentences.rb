@@ -1,9 +1,19 @@
 require 'pry'
 
 class String
+  attr_accessor :str
 
-  def sentence?
-    
+  def intitialize (str)
+    @str = str
+  end
+
+  def sentence?(str_end)
+    self.str = str_end
+    if period == str_end.end_with?('.')
+      true
+    else 
+      false
+    end
   end
 
   def question?
